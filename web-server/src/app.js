@@ -12,7 +12,7 @@ app.use(express.static(publicDirectoryPath))
 app.get('',(req,res)=>{
     res.render("index")
 })
-// app.get('',(req,res)=>{
+// app.get('',(req,res)=>{ 
 //     res.send('<h1>Weather</h1>')
 // })
 // app.get('/help',(req,res)=>{

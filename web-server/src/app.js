@@ -39,8 +39,15 @@ app.get('/help', (req, res) => {
     })
 })
 app.get('/products',(req,res)=>{
+    if(!req.query.search){
+        return res.send({
+            error: 'You must provide a search query'
+        })
+    }
+
+
     // console.log(req.query)
-    // console.log(req.query.search)
+    console.log(req.query.search)
     res.send({
         products:[]
     })

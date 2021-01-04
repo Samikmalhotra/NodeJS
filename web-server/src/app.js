@@ -38,7 +38,11 @@ app.get('/help', (req, res) => {
         name: 'Sam'
     })
 })
-
+app.get('/products',(req,res)=>{
+    res.send({
+        products:[]
+    })
+})
 app.get('/weather', (req, res) => {
     res.send({
         forecast: 'It is snowing',

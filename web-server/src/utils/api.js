@@ -12,6 +12,7 @@ const weather=(address,callback)=>{
       callback(undefined,{
         location: body.location.name,
         time: body.location.localtime,
+        report: 'The weather is '+body.current.text+' and wind speed is '+body.current.wind_kph+' kph'
       })
     } 
   })

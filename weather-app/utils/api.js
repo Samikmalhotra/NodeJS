@@ -5,9 +5,14 @@ const weather=(address,callback)=>{
     if(error){
       callback("Unable to connect to location services",undefined)
     }
-    
+    else if(body.length === 0){
+      callback("Unable to find location", undefined)
+    }
     else{
-        console.log(body)
+      callback(undefined,{
+        location: body.location.name,
+        time: body.location.localtime,
+      })
     } 
   })
 }

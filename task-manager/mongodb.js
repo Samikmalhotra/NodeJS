@@ -51,7 +51,12 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
             description: 'Pot plants',
             completed: false
         }
-    ])
+    ],(error, result)=>{
+        if(error){
+            return console.log('Unable to insert')
+        }
+        console.log(result.ops)
+    })
 
 
 })

@@ -10,5 +10,5 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
     if(error){
         return console.log('Unable to connect to database!')
     }
-    console.log('Connected correctly!')
+    const db= client.db(databaseName)
 })

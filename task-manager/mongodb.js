@@ -22,21 +22,36 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
 //         console.log(result.ops)
 // })
 
-    db.collection('users').insertMany([
+    // db.collection('users').insertMany([
+    //     {
+    //         name:'Jen',
+    //         age:27
+    //     },
+    //     {
+    //         name: 'Gunther',
+    //         age: 30
+    //     }
+    // ],(error, result)=>{
+    //     if(error){
+    //         return console.log('Unable to Insert')
+    //     }
+    //     console.log(result.ops)
+    // })
+
+    db.collection('tasks').insertMany([
         {
-            name:'Jen',
-            age:27
+            description: 'Clean the house',
+            completed: true
         },
         {
-            name: 'Gunther',
-            age: 30
+            description: 'Renew subscription',
+            completed: false
+        },
+        {
+            description: 'Pot plants',
+            completed: false
         }
-    ],(error, result)=>{
-        if(error){
-            return console.log('Unable to Insert')
-        }
-        console.log(result.ops)
-    })
+    ])
 
 
 })

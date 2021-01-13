@@ -20,16 +20,16 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
     }
     const db= client.db(databaseName)
 
-    db.collection('users').insertOne({
-        _id: id,
-        name:'Alex',
-        age: 29
-    }, (error, result)=>{
-        if (error){ 
-            return console.log('Unable to Insert User')
-        }
-        console.log(result.ops)
-})
+//     db.collection('users').insertOne({
+//         _id: id,
+//         name:'Alex',
+//         age: 29
+//     }, (error, result)=>{
+//         if (error){ 
+//             return console.log('Unable to Insert User')
+//         }
+//         console.log(result.ops)
+// })
 
     // db.collection('users').insertMany([
     //     {

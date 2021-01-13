@@ -12,6 +12,7 @@ const databaseName='task-manager'
 const id = new ObjectID()
 console.log(id)
 console.log(id.getTimestamp())
+console.log(id.id)
 
 MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
     if(error){

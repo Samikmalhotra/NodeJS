@@ -14,6 +14,7 @@ console.log(id)
 console.log(id.getTimestamp())
 console.log(id.id)
 console.log(id.id.length)
+console.log(id.toHexString().length)
 
 MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
     if(error){

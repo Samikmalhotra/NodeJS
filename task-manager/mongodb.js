@@ -74,5 +74,11 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
         }
         console.log(user)
     })
+    db.collection('users').findOne({_id: new ObjectID("5ffec1578eff7239a0a6ff1b")}, (error, user)=>{
+        if(error){
+            console.log('Unable to fetch')
+        }
+        console.log(user)
+    })
 
 })

@@ -86,5 +86,11 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
     db.collection('users').find({age: 27}).count((error, count)=>{
         console.log(count)
     })
+    db.collection('tasks').find({_id: new ObjectID("5ffdf06feff77f24d42f19a0")}, (error,task)=>{
+        if(error){
+            console.log('Unable to fetch data')
+        }
+        console.log(task)
+    })
 
 })

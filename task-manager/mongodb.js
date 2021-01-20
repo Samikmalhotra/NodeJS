@@ -68,32 +68,32 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
     //     }
     //     console.log(result.ops)
     // })
-    db.collection('users').findOne({name:'Jen'}, (error, user)=>{
-        if(error){
-            console.log('Unable to fetch')
-        }
-        console.log(user)
-    })
-    db.collection('users').findOne({_id: new ObjectID("5ffec1578eff7239a0a6ff1b")}, (error, user)=>{
-        if(error){
-            console.log('Unable to fetch')
-        }
-        console.log(user)
-    })
-    db.collection('users').find({age: 27}).toArray((error, users)=>{
-        console.log(users)
-    })
-    db.collection('users').find({age: 27}).count((error, count)=>{
-        console.log(count)
-    })
-    db.collection('tasks').findOne({_id: new ObjectID("5ffdf06feff77f24d42f19a0")}, (error,task)=>{
-        if(error){
-            console.log('Unable to fetch data')
-        }
-        console.log(task)
-    })
-    db.collection('tasks').find({completed: false}).toArray((error, tasks)=>{
-        console.log(tasks)
-    })
+        // db.collection('users').findOne({name:'Jen'}, (error, user)=>{
+        //     if(error){
+        //         console.log('Unable to fetch')
+        //     }
+        //     console.log(user)
+        // })
+        // db.collection('users').findOne({_id: new ObjectID("5ffec1578eff7239a0a6ff1b")}, (error, user)=>{
+        //     if(error){
+        //         console.log('Unable to fetch')
+        //     }
+        //     console.log(user)
+        // })
+        // db.collection('users').find({age: 27}).toArray((error, users)=>{
+        //     console.log(users)
+        // })
+        // db.collection('users').find({age: 27}).count((error, count)=>{
+        //     console.log(count)
+        // })
+        // db.collection('tasks').findOne({_id: new ObjectID("5ffdf06feff77f24d42f19a0")}, (error,task)=>{
+        //     if(error){
+        //         console.log('Unable to fetch data')
+        //     }
+        //     console.log(task)
+        // })
+        // db.collection('tasks').find({completed: false}).toArray((error, tasks)=>{
+        //     console.log(tasks)
+        // })
 
 })

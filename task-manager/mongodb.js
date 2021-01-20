@@ -124,7 +124,7 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
                 db.collection('users').deleteMany({
                     age: 27
                 }).then((result)=>{
-                    console.log(result.modified)
+                    console.log(result)
                 }).catch((error)=>{
                     console.log(error)
                 })

@@ -5,5 +5,7 @@ const doWorkCallback=(callback)=>{
 
 }
 doWorkCallback((error,result)=>{
-
+    if(error){
+        return console.log(error)
+    }
 })

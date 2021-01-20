@@ -129,6 +129,8 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
                 //     console.log(error)
                 // })
                 db.collection('tasks').deleteOne({
+                    description: 'Clean the house'
+                }).then((result)=>{
                     
                 })
 })

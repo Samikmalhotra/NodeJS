@@ -4,3 +4,6 @@ const doWorkPromise = new Promise((resolve, reject)=>{
 
     },2000)
 })
+doWorkPromise.then((result)=>{
+    console.log('Success',result)
+})

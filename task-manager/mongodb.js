@@ -109,9 +109,23 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
             //    }).catch((error) => {
             //        console.log(error)
             //    })
-
+            db.collection('tasks').updateMany({
+                completed: false
+            }, {
+                $set: {
+                    completed: true
+                }
+            }).then((result) => {
+                console.log(result.modifiedCount)
+            }).catch((error) => {
+                console.log(error)
+            })
            
                 db.collection('users').deleteMany({
                     age: 27
+                }).then((result)=>{
+                    console.log(result.modified)
+                }).catch((error)=>{
+                    console.log(error)
                 })
 })

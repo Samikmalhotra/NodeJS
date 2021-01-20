@@ -68,6 +68,7 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
     //     }
     //     console.log(result.ops)
     // })
+
         // db.collection('users').findOne({name:'Jen'}, (error, user)=>{
         //     if(error){
         //         console.log('Unable to fetch')
@@ -96,4 +97,8 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
         //     console.log(tasks)
         // })
 
+
+        db.collection('users').updateOne({_id: new ObjectID("5ffd943bf4b6e034843d231e")},{
+            
+        })
 })

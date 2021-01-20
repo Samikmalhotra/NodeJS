@@ -1,6 +1,9 @@
-const doWorkCallBack=()=>{
+const doWorkCallback=(callback)=>{
+    setTimeout(()=>{
+        callback('This is my error',undefined)
+    }, 2000)
 
 }
-doWorkCallBack((error,result)=>{
+doWorkCallback((error,result)=>{
 
 })

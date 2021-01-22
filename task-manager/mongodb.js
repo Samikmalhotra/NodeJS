@@ -128,11 +128,11 @@ MongoClient.connect(connectionURL,{useUnifiedTopology:true},(error,client)=>{
                 // }).catch((error)=>{
                 //     console.log(error)
                 // })
-                db.collection('tasks').deleteOne({
-                    description: 'Clean the house'
-                }).then((result)=>{
-                    console.log(result)
-                }).catch((error)=>{
-                    console.log(error)
-                })
+                // db.collection('tasks').deleteOne({
+                //     description: 'Clean the house'
+                // }).then((result)=>{
+                //     console.log(result)
+                // }).catch((error)=>{
+                //     console.log(error)
+                // })
 })

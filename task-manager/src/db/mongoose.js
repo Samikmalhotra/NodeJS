@@ -10,11 +10,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/tak-manager-api',{
 const User = mongoose.model('User',{
     name:{
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     email:{
         type: String,
         required: true,
+        trim: true,
         validate(value){
             if(!validator.isEmail(value)){
                 throw new Error('This email is invalid')
@@ -23,6 +25,7 @@ const User = mongoose.model('User',{
     },
     age:{
         type: Number,
+        default: 0,
         validate(value){
             if(value<0){
                 throw new Error('Age must be a positive number')
@@ -32,9 +35,8 @@ const User = mongoose.model('User',{
 })
 
 const me = new User({
-    name: 'Sam',
-    age: 27,
-    email: 'mike@'
+    name: '  Axel  ',
+    email: 'mike@xxyz.io   '
 })
 
 me.save().then(()=>{

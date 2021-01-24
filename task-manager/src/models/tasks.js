@@ -14,4 +14,4 @@ const Task = mongoose.model('Task',{
     }
 })
 
-module.exports= User
+module.exports= Task

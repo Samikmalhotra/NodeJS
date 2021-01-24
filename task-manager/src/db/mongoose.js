@@ -44,11 +44,11 @@ const Task = mongoose.model('Task',{
 // }).catch((error)=>{
 //     console.log('Error', error)
 // })
-const task= new Task({
-    description: ' Learn Mongoose   '
-})
-task.save().then(()=>{
-    console.log(task)
-}).catch((error)=>{
-    console.log(error)
-})
+// const task= new Task({
+//     description: ' Learn Mongoose   '
+// })
+// task.save().then(()=>{
+//     console.log(task)
+// }).catch((error)=>{
+//     console.log(error)
+// })

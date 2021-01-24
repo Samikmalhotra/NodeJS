@@ -20,19 +20,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/tak-manager-api',{
 //     console.log('Error', error)
 // })
 
-const Task = mongoose.model('Task',{
-    description: {
-        type: String,
-        trim: true,
-        required: true
-    },
-    completed:{
-        type: Boolean,
-        required: false,
-        trim: true,
-        default: false
-    }
-})
+
 
 // const work = new Task({
 //     description: 'Complete node.js',

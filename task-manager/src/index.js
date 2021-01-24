@@ -10,6 +10,12 @@ app.use(express.json())
 
 app.post('/users', (req, res) => {
     const user = new User(req.body)
+
+    user.save().then(()=>{
+
+    }).catch((error)=>{
+        console.log(' Error ', error)
+    })
 })
 
 

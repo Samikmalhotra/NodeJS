@@ -37,6 +37,6 @@ const User = mongoose.model('User',{
             }
         }
     }
-})0
+})
 
 module.exports= User

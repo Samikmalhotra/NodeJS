@@ -19,7 +19,11 @@ app.post('/users', (req, res) => {
 })
 
 app.get('/users',(req,res)=>{
-    User.find({})
+    User.find({}).then(()=>{
+        res.send
+    }).catch(()=>{
+
+    })
 })
  
 app.post('/tasks', (req,res)=>{

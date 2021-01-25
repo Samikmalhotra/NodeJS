@@ -5,3 +5,15 @@ const add=(a,b)=>{
         },2000)
     ])
 }
+
+add(1,2).then((sum)=>{
+    console.log(sum)
+
+    add(sum,5).then((sum2)=>{
+        console.log(sum2)
+    }).catch((e)=>{
+        console.log(sum2)
+    })
+}).catch((error)=>{
+    console.log(error)
+})

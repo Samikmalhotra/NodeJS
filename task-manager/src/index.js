@@ -126,12 +126,12 @@ app.get('/tasks/:id',async(req,res)=>{
 app.patch('/users/:id',async(req,res)=>{
     const _id = req.params.id
     const updates = Object.keys(req.body)
-    const allowedUpdates = ['name', ' email', 'password', 'age']
+    const allowedUpdates = ["name", "email", "password", "age"]
     const isValidOperation = updates.every(()=>{
         return allowedUpdates.includes(updates)
     })
 
-    if (!isValidOperation){
+    if(!isValidOperation){
         return res.status(400).send({error: "Invalid updates!"})
     } 
 

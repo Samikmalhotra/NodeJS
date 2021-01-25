@@ -112,7 +112,7 @@ app.get('/tasks/:id',async(req,res)=>{
     }catch(e){
         res.status.send()
     }
-    
+
     // Task.findById(_id).then((task)=>{
     //     if(!task){
     //         return res.status(404).send()
@@ -121,6 +121,20 @@ app.get('/tasks/:id',async(req,res)=>{
     // }).catch((error)=>{
     //     res.status(500).send()
     // })
+})
+
+app.patch('/users/:id',async(req,res)=>{
+    const _id = req.params.id
+    try{
+        const user = await User.findByIdAndUpdate(_id, req.body, {new:true, runValidators: true})
+        if(!user){
+            res.status(404).send()
+        }
+        res.send(user)
+    }
+    catch(e){
+        res.status(400).send(e)
+    }
 })
 
 app.listen(port, ()=>{

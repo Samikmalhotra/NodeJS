@@ -4,8 +4,10 @@ const validator = require('validator')
 mongoose.connect('mongodb://127.0.0.1:27017/tak-manager-api',{
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useFindAndModify: false 
 })
+
 
 
 // const me = new User({

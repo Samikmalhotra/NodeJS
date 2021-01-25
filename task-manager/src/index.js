@@ -17,6 +17,10 @@ app.post('/users', (req, res) => {
         res.status(400).send(error)
     })
 })
+
+app.get('/users',(req,res)=>{
+    User.find({})
+})
  
 app.post('/tasks', (req,res)=>{
     const task = new Task(req.body)

@@ -9,6 +9,13 @@ const port= process.env.PORT || 3000
 
 app.use(express.json())
 
+const router = new express.Router()
+router.get('/test',(req,res)=>{
+    res.send('This is from my other router')
+})
+app.use(router)
+
+
 app.post('/users', async(req, res) => {
     const user = new User(req.body)
 
@@ -184,7 +191,7 @@ app.delete('/users/:id', async(req,res)=>{
 })
 
 app.delete('/tasks/:id', async(req,res)=>{
-    const task = await Task.findByIdAndDelete(req.params.id)
+    const task = await  Task.findByIdAndDelete(req.params.id)
 
     try{
         if(!task){

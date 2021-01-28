@@ -184,7 +184,7 @@ app.delete('/users/:id', async(req,res)=>{
 })
 
 app.delete('/tasks/:id', async(req,res)=>{
-    const task = Task.findByIdAndDelete(req.params.id)
+    const task = await Task.findByIdAndDelete(req.params.id)
 
     try{
         if(!task){

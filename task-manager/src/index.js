@@ -2,6 +2,7 @@ const express=require('express')
 require('./db/mongoose') 
 const User = require('./models/users')
 const Task = require('./models/tasks.js')
+const { ObjectID } = require('mongodb')
 
 const app= express()
 const port= process.env.PORT || 3000        
@@ -145,7 +146,22 @@ app.patch('/users/:id', async (req, res) => {
     }
 })
 
-app.patch('/tasks')
+app.patch('/tasks/:id', async(req,res)=>{
+    const updates = Object.keys(req.body)
+    const allowedUpdates = ['descrition','completed']
+    const isValidOperation = updates.every((update)=> allowedUpdates.includes(update))
+
+    if(!isValidOperation){
+        return res.status(400).send({error: 'Invalid updates'})
+    }
+    
+    try{
+        const tasks = await Task.findByIdAndUpdate({})
+    }
+    catch(e){
+
+    }
+})
 
 app.listen(port, ()=>{
     console.log('Server is up on port '+ port)

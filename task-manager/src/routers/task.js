@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const express = require('express')
-const User = require('../models/tasks')
+const Task = require('../models/tasks')
 const router = new express.Router()
 
 

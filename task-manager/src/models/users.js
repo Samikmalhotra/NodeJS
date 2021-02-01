@@ -40,6 +40,11 @@ const userSchema = new mongoose.Schema({
     }
 })
 
+userSchema.statics.findByCredentials = async(email,password) => {
+    const user = await User.findOne()
+}
+
+//Hashing the plain text password
 userSchema.pre('save', async function(next){
     const user = this
     

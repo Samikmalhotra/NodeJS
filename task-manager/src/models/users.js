@@ -41,7 +41,11 @@ const userSchema = new mongoose.Schema({
 })
 
 userSchema.statics.findByCredentials = async(email,password) => {
-    const user = await User.findOne()
+    const user = await User.findOne({email})
+
+    if(!user){
+        throw new Error('Unable to login')
+    }
 }
 
 //Hashing the plain text password

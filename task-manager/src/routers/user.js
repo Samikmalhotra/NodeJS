@@ -1,6 +1,7 @@
 const { Router } = require('express')
 const express = require('express')
 const User = require('../models/users')
+const auth = require('../middleware/auth')
 const router = new express.Router()
 
 router.post('/users', async(req, res) => {
@@ -31,7 +32,7 @@ router.post('/users/login',async(req,res)=>{
     }
 })
 
-router.get('/users',async(req,res)=>{
+router.get('/users', auth,async(req,res)=>{
     try{
         const users = await User.find({})
         res.send(users)

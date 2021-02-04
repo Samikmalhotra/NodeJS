@@ -51,7 +51,11 @@ const jwt = require('jsonwebtoken')
 
 // myFunction()
 
-const pet = {
-    name: 'Hal'
-}
-console.log(JSON.stringify(pet))
+// const pet = {
+//     name: 'Hal'
+// }
+// pet.toJSON = function(){
+//     return {}
+// }
+
+// console.log(JSON.stringify(pet))

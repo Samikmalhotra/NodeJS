@@ -33,20 +33,25 @@ const jwt = require('jsonwebtoken')
 
 
 
-const myFunction = async() => {
-    // const password = 'Red123!'
-    // const hashedPassword = await bcrypt.hash(password, 8)
+// const myFunction = async() => {
+//     // const password = 'Red123!'
+//     // const hashedPassword = await bcrypt.hash(password, 8)
 
-    // console.log(password)
-    // console.log(hashedPassword)
+//     // console.log(password)
+//     // console.log(hashedPassword)
 
-    // const isMatch = await bcrypt.compare('Red123!', hashedPassword)
-    // console.log(isMatch)
+//     // const isMatch = await bcrypt.compare('Red123!', hashedPassword)
+//     // console.log(isMatch)
 
-    const token = jwt.sign({_id:'abc123'},'thisismytoken', {expiresIn: '7 days'})
-    console.log(token)
+//     const token = jwt.sign({_id:'abc123'},'thisismytoken', {expiresIn: '7 days'})
+//     console.log(token)
     
-    console.log(jwt.verify(token, 'thisismytoken'))
-}
+//     console.log(jwt.verify(token, 'thisismytoken'))
+// }
 
-myFunction()
+// myFunction()
+
+const pet = {
+    name: 'Hal'
+}
+console.log(JSON.stringify(pet))
